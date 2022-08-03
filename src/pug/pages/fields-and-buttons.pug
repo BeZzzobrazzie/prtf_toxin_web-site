@@ -1,0 +1,24 @@
+extends ../layout
+
+block variables
+
+
+
+block content
+  .fields-and-buttons
+    .container.fields-and-buttons__container
+      .text-field.fields-and-buttons__text-field
+        label.h3.text-field__label(for="text-field") text field 
+        p.text-field__sublabel Default 
+        input.text-field__input(type="text" id="text-field" value="Email")
+      
+      .text-field.fields-and-buttons__text-field
+        label.h3.text-field__label(for="text-field-hover-focus") text field 
+        p.text-field__sublabel Hover / Focus 
+        input.text-field__input.text-field__input_status_hover-focus(type="text" id="text-field-hover-focus" value="This is pretty awesome")
+
+      .dropdown.fields-and-buttons__dropdown
+        label.h3.dropdown__label(for="text-field") Dropdown 
+        select.dropdown__select(id="text-field" value="Сколько гостей")
+          option efef 
+          option 222

@@ -1,0 +1,13 @@
+-
+  let obj = {
+    {
+      "color": "#1F2041",
+      "name": "Dark Shade 100%",
+      "hex": "#1F2041",
+    },
+    {
+      "color": "#BC9CFF",
+      "name": "Purple",
+      "hex": "#BC9CFF",
+    },
+  }

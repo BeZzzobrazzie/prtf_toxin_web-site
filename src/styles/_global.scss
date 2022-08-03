@@ -1,0 +1,20 @@
+
+.container{
+  max-width: 1302px;
+  margin: 0 auto;
+
+  padding: 0 10px;
+}
+
+
+
+@import "../blocks/colors-and-fonts/colors-and-fonts";
+@import "../blocks/palette/palette";
+@import "../blocks/font-set/font-set";
+@import "../blocks/h1/h1";
+@import "../blocks/h2/h2";
+@import "../blocks/h3/h3";
+@import "../blocks/body-text/body-text";
+@import "../blocks/text-field/text-field";
+@import "../blocks/fields-and-buttons/fields-and-buttons";
+@import "../blocks/dropdown/dropdown.scss";

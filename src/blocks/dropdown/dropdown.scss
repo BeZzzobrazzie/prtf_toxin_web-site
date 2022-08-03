@@ -1,0 +1,9 @@
+.dropdown {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 320px;
+
+  @import "__label/_label";
+  @import "__select/__select";
+}

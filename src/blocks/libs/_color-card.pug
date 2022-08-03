@@ -1,0 +1,7 @@
+mixin color-card(color, name, hex)
+  .color-card.palette__color-card
+    .color-card__color(class= `color-card__color_color-hex_${color}`)
+    .color-card__title
+      //h2.color-card__name= name
+      h2.h2.color-card__name= name
+      p.color-card__hex= hex
