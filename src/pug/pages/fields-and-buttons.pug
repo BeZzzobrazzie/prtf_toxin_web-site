@@ -15,10 +15,19 @@ block content
       .text-field.fields-and-buttons__text-field
         label.h3.text-field__label(for="text-field-hover-focus") text field 
         p.text-field__sublabel Hover / Focus 
-        input.text-field__input.text-field__input_status_hover-focus(type="text" id="text-field-hover-focus" value="This is pretty awesome")
+        input.text-field__input.text-field__input_status_hover-focus.body-text(type="text" id="text-field-hover-focus" value="This is pretty awesome")
 
       .dropdown.fields-and-buttons__dropdown
-        label.h3.dropdown__label(for="text-field") Dropdown 
-        select.dropdown__select(id="text-field" value="Сколько гостей")
-          option efef 
-          option 222
+        label.h3.dropdown__label(for="dropdown__field") Dropdown 
+        .dropdown__field(id="dropdown__field")
+          .dropdown__value.body-text Сколько гостей
+          .dropdown__expand.site-container__material-icons expand_more
+        .dropdown__list(hidden)
+          .dropdown__row
+            .dropdown__row-text.h3 Взрослые
+            .dropdown__btn-count -
+            .dropdown__count 
+            .dropdown__btn-count +
+          .dropdown__row
+          .dropdown__row
+
