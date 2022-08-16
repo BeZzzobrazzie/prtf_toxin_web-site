@@ -28,6 +28,7 @@ function quantityChange() {
         }
         if(dropdown__count.textContent > 0) {
             dropdown__count.textContent = + dropdown__count.textContent - 1;
+            totalCount("-", target);
 
             if(dropdown__count.textContent == 0) {
                 target.classList.remove("dropdown__btn-count_further");
@@ -45,6 +46,7 @@ function quantityChange() {
         }
         if(dropdown__count.textContent < 99) {
             dropdown__count.textContent = + dropdown__count.textContent + 1;
+            totalCount("+", target);
 
             if(dropdown__count.textContent == 99) {
                 target.classList.remove("dropdown__btn-count_further");
@@ -54,5 +56,32 @@ function quantityChange() {
     }
 }
 
+function totalCount(sign, target) {
+    let dropdown__value = target.closest(".dropdown").querySelector(".dropdown__value");
+    if(dropdown__value.textContent == "Сколько гостей") {
+        dropdown__value.textContent = 0;
+    }
+    if(sign == "+") {
+        dropdown__value.textContent = (+dropdown__value.textContent.split(" ")[0] + 1) + " " + getNoun((+dropdown__value.textContent.split(" ")[0] + 1), "гость", "гостя", "гостей");
+    }
+    else if (sign == "-") {
+        dropdown__value.textContent = (+dropdown__value.textContent.split(" ")[0] - 1) + " " + getNoun((+dropdown__value.textContent.split(" ")[0] - 1), "гость", "гостя", "гостей");
+    }
+}
 
+function getNoun(number, one, two, five) {
+    let n = Math.abs(number);
+    n %= 100;
+    if (n >= 5 && n <= 20) {
+      return five;
+    }
+    n %= 10;
+    if (n === 1) {
+      return one;
+    }
+    if (n >= 2 && n <= 4) {
+      return two;
+    }
+    return five;
+  }
 

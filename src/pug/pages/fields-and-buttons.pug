@@ -19,29 +19,35 @@ block content
 
       .dropdown.fields-and-buttons__dropdown
         label.h3.dropdown__label(for="dropdown__field") Dropdown 
-        .dropdown__field(id="dropdown__field")
-          .dropdown__value.body-text Сколько гостей
-          .dropdown__expand.site-container__material-icons expand_more
-        .dropdown__list(hidden)
-          .dropdown__row
-            .dropdown__row-text.h3 Взрослые
-            .dropdown__count-group 
-              .dropdown__btn-count.dropdown__btn-count_minus -
-              .dropdown__count.h3 0
-              .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
-          .dropdown__row
-            .dropdown__row-text.h3 Дети
-            .dropdown__count-group 
-              .dropdown__btn-count -
-              .dropdown__count.h3 0
-              .dropdown__btn-count +
-          .dropdown__row
-            .dropdown__row-text.h3 Младенцы
-            .dropdown__count-group 
-              .dropdown__btn-count -
-              .dropdown__count.h3 0
-              .dropdown__btn-count +
-          .dropdown__command-line
-            .h3.dropdown__command.dropdown__command_clear Очистить
-            .h3.dropdown__command.dropdown__command_apply Применить
+        .dropdown__body
+          .dropdown-field.dropdown__field(id="dropdown__field")
+            .dropdown-field__value.body-text Сколько гостей
+            .dropdown-field__expand.site-container__material-icons expand_more
+          .dropdown__list(hidden)
+            .dropdown__row
+              .dropdown__row-text.h3 Взрослые
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__row
+              .dropdown__row-text.h3 Дети
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__row
+              .dropdown__row-text.h3 Младенцы
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__command-line
+              .h3.dropdown__command.dropdown__command_clear Очистить
+              .h3.dropdown__command.dropdown__command_apply Применить
+
+      .text-field.fields-and-buttons__text-field
+        label.h3.text-field__label(for="text-field") masked text field
+        input.text-field__input.text-field__masked-text(type="date" id="text-field" value="Email")
+
 
