@@ -66,6 +66,9 @@ function totalCount(sign, target) {
     }
     else if (sign == "-") {
         dropdown__value.textContent = (+dropdown__value.textContent.split(" ")[0] - 1) + " " + getNoun((+dropdown__value.textContent.split(" ")[0] - 1), "гость", "гостя", "гостей");
+        if(+dropdown__value.textContent.split(" ")[0] == 0) {
+            dropdown__value.textContent = "Сколько гостей";
+        }
     }
 }
 
