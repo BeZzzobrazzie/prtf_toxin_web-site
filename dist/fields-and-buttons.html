@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <!--meta(http-equiv='X-UA-Compatible' content='IE=edge')-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="none">
+    <meta name="description" content="none">
+    <link href="/assets/css/index.56ed3515.css" rel="stylesheet">
+    <title>Fields and buttons</title>
+  </head>
+  <body>
+    <div class="site-container">
+      <div class="fields-and-buttons">
+        <div class="container fields-and-buttons__container">
+          <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
+              for="text-field">text field </label>
+            <p class="text-field__sublabel">Default </p><input class="text-field__input" type="text" id="text-field"
+              value="Email">
+          </div>
+          <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
+              for="text-field-hover-focus">text field </label>
+            <p class="text-field__sublabel">Hover / Focus </p><input
+              class="text-field__input text-field__input_status_hover-focus body-text" type="text"
+              id="text-field-hover-focus" value="This is pretty awesome">
+          </div>
+          <div class="dropdown fields-and-buttons__dropdown"><label class="h3 dropdown__label"
+              for="dropdown__field">Dropdown </label>
+            <div class="dropdown-field dropdown__field" id="dropdown__field">
+              <div class="dropdown-field__value body-text">Сколько гостей</div>
+              <div class="dropdown-field__expand site-container__material-icons">expand_more</div>
+            </div>
+            <div class="dropdown__list" hidden>
+              <div class="dropdown__row">
+                <div class="dropdown__row-text h3">Взрослые</div>
+                <div class="dropdown__count-group">
+                  <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                  <div class="dropdown__count h3">0</div>
+                  <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                </div>
+              </div>
+              <div class="dropdown__row">
+                <div class="dropdown__row-text h3">Дети</div>
+                <div class="dropdown__count-group">
+                  <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                  <div class="dropdown__count h3">0</div>
+                  <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                </div>
+              </div>
+              <div class="dropdown__row">
+                <div class="dropdown__row-text h3">Младенцы</div>
+                <div class="dropdown__count-group">
+                  <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                  <div class="dropdown__count h3">0</div>
+                  <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                </div>
+              </div>
+              <div class="dropdown__command-line">
+                <div class="h3 dropdown__command dropdown__command_clear">Очистить</div>
+                <div class="h3 dropdown__command dropdown__command_apply">Применить</div>
+              </div>
+            </div>
+          </div>
+          <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
+              for="text-field">masked text field</label><input class="text-field__input text-field__masked-text"
+              type="date" id="text-field" value="Email"></div>
+        </div>
+      </div>
+    </div>
+    <!--include _scripts-->
+    <script src="/assets/js/main.bc9788ac.js"></script>
+    <script src="/assets/js/dropdown.e0341acf.js"></script>
+  </body>
+</html>
