@@ -1,5 +1,10 @@
 21.08
   Читать БЭМ
+  все файлы должны называться полным именем search-form__input.css а не __input.css
+  
+
+
+
   https://github.com/fullstack-development/front-end-best-practices
   Остановился читать на.. css 5 пункт
 
