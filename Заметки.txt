@@ -11,6 +11,7 @@
   
   html
     разобраться с контейнерами страницы (body, container, main и т.д.)
+    https://habr.com/ru/company/ruvds/blog/509194/
     input вложить в label
 
   css
