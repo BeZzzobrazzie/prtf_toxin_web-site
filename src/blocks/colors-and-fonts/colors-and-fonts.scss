@@ -1,6 +1,12 @@
 .colors-and-fonts {
-    @import "__container/_container";
-    @import "__font-set/_font-set";
-    @import "__palette/_palette";
+
+  margin-top: 145px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @import "__container/_container";
+  @import "__font-set/_font-set";
+  @import "__palette/_palette";
 
 }

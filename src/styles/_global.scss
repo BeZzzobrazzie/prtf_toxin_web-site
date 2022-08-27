@@ -1,12 +1,5 @@
 
-.container{
-  max-width: 1302px;
-  margin: 0 auto;
-
-  padding: 0 10px;
-}
-
-//@import "../blocks/container/container";
+@import "../blocks/container/container";
 @import "../blocks/material-icons/material-icons";
 @import "../blocks/colors-and-fonts/colors-and-fonts";
 @import "../blocks/palette/palette";
@@ -17,6 +10,6 @@
 @import "../blocks/body-text/body-text";
 @import "../blocks/text-field/text-field";
 @import "../blocks/fields-and-buttons/fields-and-buttons";
-@import "../blocks/dropdown/dropdown.scss";
+@import "../blocks/dropdown/dropdown";
 @import "../blocks/dropdown-field/dropdown-field";
 
