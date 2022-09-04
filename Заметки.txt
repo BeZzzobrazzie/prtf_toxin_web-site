@@ -29,3 +29,23 @@
     3.. Шрифты всё
     4.. БЭМ всё
 
+
+
+
+[HMR] Update failed: Loading hot update chunk main failed.
+(missing: http://localhost:8080/main.0fb2d25567846e25c156.hot-update.js)
+loadUpdateChunk/<@http://localhost:8080/assets/js/main.f8b824b9.js:629:26
+loadUpdateChunk@http://localhost:8080/assets/js/main.f8b824b9.js:624:20
+__webpack_require__.hmrC.jsonp/<@http://localhost:8080/assets/js/main.f8b824b9.js:1084:29
+__webpack_require__.hmrC.jsonp@http://localhost:8080/assets/js/main.f8b824b9.js:1079:22
+hotCheck/</</<@http://localhost:8080/assets/js/main.f8b824b9.js:470:47
+hotCheck/</<@http://localhost:8080/assets/js/main.f8b824b9.js:466:55
+promise callback*hotCheck/<@http://localhost:8080/assets/js/main.f8b824b9.js:461:43
+promise callback*hotCheck@http://localhost:8080/assets/js/main.f8b824b9.js:452:15
+check@webpack://prtf_toxin_web-site/./node_modules/webpack/hot/dev-server.js?:14:5
+@webpack://prtf_toxin_web-site/./node_modules/webpack/hot/dev-server.js?:55:4
+emit@webpack://prtf_toxin_web-site/./node_modules/events/events.js?:153:17
+reloadApp@webpack://prtf_toxin_web-site/./node_modules/webpack-dev-server/client/utils/reloadApp.js?:53:67
+ok@webpack://prtf_toxin_web-site/./node_modules/webpack-dev-server/client/index.js?:221:68
+initSocket/<@webpack://prtf_toxin_web-site/./node_modules/webpack-dev-server/client/socket.js?:68:29
+onMessage/this.client.onmessage@webpack://prtf_toxin_web-site/./node_modules/webpack-dev-server/client/clients/WebSocketClient.js?:55:10

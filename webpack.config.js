@@ -4,6 +4,10 @@ const PugPlugin = require('pug-plugin');
 module.exports = {
   mode: 'development',
   entry: {
+    //index: './src/views/index.pug',      // output index.html
+    //about: './src/views/about/index.pug' // output about.html
+    //index2: './src/long/index2.pug',
+
     index: './src/views/index.pug',      // output index.html
     "colors-and-fonts": "./src/views/colors-and-fonts.pug",
     "fields-and-buttons": "./src/views/fields-and-buttons.pug",

@@ -1,5 +1,5 @@
 {
-  "name": "prtf_toxin_web-site",
+  "name": "webpack-template-v.2",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BeZzzobrazzie/prtf_toxin_web-site.git"
+    "url": "git+https://github.com/BeZzzobrazzie/webpack-template-v.2.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BeZzzobrazzie/prtf_toxin_web-site/issues"
+    "url": "https://github.com/BeZzzobrazzie/webpack-template-v.2/issues"
   },
-  "homepage": "https://github.com/BeZzzobrazzie/prtf_toxin_web-site#readme",
+  "homepage": "https://github.com/BeZzzobrazzie/webpack-template-v.2#readme",
   "devDependencies": {
     "css-loader": "^6.7.1",
     "pug-plugin": "^4.1.1",
