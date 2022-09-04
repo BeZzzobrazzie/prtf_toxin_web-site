@@ -11,3 +11,6 @@ responsive
   
 
 https://github.com/fullstack-development/front-end-best-practices/blob/master/Initiation.md
+
+
+Отступы в проекте: 2 пробела
