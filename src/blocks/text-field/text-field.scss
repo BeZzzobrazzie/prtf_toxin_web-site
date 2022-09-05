@@ -1,12 +1,10 @@
 .text-field {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    width: 320px;
-    @import "__label/__label";
-    @import "__sublabel/__sublabel";
-    @import "__input/_input";
-    @import "__masked-text/__masked-text";
-
-
+  width: 320px;
+  @import '__label/__label';
+  @import '__sublabel/__sublabel';
+  @import '__input/_input';
+  @import '__masked-text/__masked-text';
 }

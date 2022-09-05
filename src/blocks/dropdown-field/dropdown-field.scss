@@ -12,7 +12,7 @@
   display: flex;
   justify-content: space-between;
 
-  @import "__value/__value";
-  @import "__expand/__expand";
-  @import "_expanded/_expanded";
+  @import '__value/__value';
+  @import '__expand/__expand';
+  @import '_expanded/_expanded';
 }
