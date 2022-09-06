@@ -1,4 +1,4 @@
-extends ../pug/layout
+extends ./layout
 
 block append variables
   -
@@ -35,26 +35,31 @@ block append variables
       },
     } 
 
+block styles 
+  link(href=require('../styles/p-colors-and-fonts.scss') rel='stylesheet')
+
 
 block content
-  .container
-    .colors-and-fonts
-    
-      .palette.colors-and-fonts__palette
-        each val, key in palette 
-          +color-card(val.color, key, val.hex)
+  .colors-and-fonts
+    .container
+      .colors-and-fonts__wrap
 
+        .colors-and-fonts__palette
+          .palette
+            each val, key in palette 
+              +color-card(val.color, key, val.hex)
 
-      .font-set.colors-and-fonts__font-set
-        +__icon("H1", 24)
-        h1.h1 This one is the sub-section or widget title
+        .colors-and-fonts__font-set
+          .font-set
+            +__icon("H1", 24)
+            h1.h1 This one is the sub-section or widget title
 
-        +__icon("H2", 19)
-        h2.h2 Next one is the item title inside widgets
+            +__icon("H2", 19)
+            h2.h2 Next one is the item title inside widgets
 
-        +__icon("H3", 12)
-        h3.h3 This is a label or CTA text
+            +__icon("H3", 12)
+            h3.h3 This is a label or CTA text
 
-        +__icon("Body", 14)
-        p.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+            +__icon("Body", 14)
+            p.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
 

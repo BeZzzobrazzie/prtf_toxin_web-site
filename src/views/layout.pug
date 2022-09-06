@@ -1,4 +1,4 @@
-include ../blocks/libs/_libs
+include ../pug/libs/_libs
 
 block variables
   -
@@ -14,7 +14,8 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='keywords' content=metaKeywords)
     meta(name='description' content=metaDescription)
-    link(href=require('../styles/index.scss') rel='stylesheet')
+    block styles
+      link(href=require('../styles/index.scss') rel='stylesheet')
 
     title #{title}
   
@@ -22,8 +23,7 @@ html(lang='en')
     block content
       h1 Hi. How are you?
 
-    //include _scripts
     block scripts
-      script(src=require('../main.js'))
+      //script(src=require('../main.js'))
 
 
