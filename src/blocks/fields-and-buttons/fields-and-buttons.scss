@@ -1,8 +1,7 @@
 .fields-and-buttons {
   height: 2000px;
-  @import '__container/_container';
-  @import '__text-field/_text-field';
+  @import '__wrap/__wrap';
+  @import '__text-field-demo/__text-field-demo';
   @import '__dropdown/__dropdown';
 
-  background-color: green;
 }

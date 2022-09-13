@@ -7,48 +7,50 @@ block append variables
 
 block content
   .fields-and-buttons
-    .container.fields-and-buttons__container
-      .text-field.fields-and-buttons__text-field
-        label.h3.text-field__label(for="text-field") text field 
-        p.text-field__sublabel Default 
-        input.text-field__input(type="text" id="text-field" value="Email")
+    .container
+      .fields-and-buttons__wrap
+        .fields-and-buttons__text-field-demo
+          .text-field-demo
+            label.h3(for="text-field") text field 
+            p.text-field-demo__sublabel Default 
+            input.text-field-input(type="text" id="text-field" value="Email")
       
-      .text-field.fields-and-buttons__text-field
-        label.h3.text-field__label(for="text-field-hover-focus") text field 
-        p.text-field__sublabel Hover / Focus 
-        input.text-field__input.text-field__input_status_hover-focus.body-text(type="text" id="text-field-hover-focus" value="This is pretty awesome")
+        .text-field.fields-and-buttons__text-field
+          label.h3.text-field__label(for="text-field-hover-focus") text field 
+          p.text-field__sublabel Hover / Focus 
+          input.text-field__input.text-field__input_status_hover-focus.body-text(type="text" id="text-field-hover-focus" value="This is pretty awesome")
 
-      .dropdown.fields-and-buttons__dropdown
-        label.h3.dropdown__label Dropdown 
-        .dropdown-field.dropdown__field
-          .dropdown-field__value.body-text Сколько гостей
-          .dropdown-field__expand.material-icons expand_more
-        .dropdown__list(hidden)
-          .dropdown__row
-            .dropdown__row-text.h3 Взрослые
-            .dropdown__count-group 
-              .dropdown__btn-count.dropdown__btn-count_minus -
-              .dropdown__count.h3 0
-              .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
-          .dropdown__row
-            .dropdown__row-text.h3 Дети
-            .dropdown__count-group 
-              .dropdown__btn-count.dropdown__btn-count_minus -
-              .dropdown__count.h3 0
-              .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
-          .dropdown__row
-            .dropdown__row-text.h3 Младенцы
-            .dropdown__count-group 
-              .dropdown__btn-count.dropdown__btn-count_minus -
-              .dropdown__count.h3 0
-              .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
-          .dropdown__command-line
-            .h3.dropdown__command.dropdown__command_clear Очистить
-            .h3.dropdown__command.dropdown__command_apply Применить
+        .dropdown.fields-and-buttons__dropdown
+          label.h3.dropdown__label Dropdown 
+          .dropdown-field.dropdown__field
+            .dropdown-field__value.body-text Сколько гостей
+            .dropdown-field__expand.material-icons expand_more
+          .dropdown__list(hidden)
+            .dropdown__row
+              .dropdown__row-text.h3 Взрослые
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__row
+              .dropdown__row-text.h3 Дети
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__row
+              .dropdown__row-text.h3 Младенцы
+              .dropdown__count-group 
+                .dropdown__btn-count.dropdown__btn-count_minus -
+                .dropdown__count.h3 0
+                .dropdown__btn-count.dropdown__btn-count_further.dropdown__btn-count_plus +
+            .dropdown__command-line
+              .h3.dropdown__command.dropdown__command_clear Очистить
+              .h3.dropdown__command.dropdown__command_apply Применить
 
-      .text-field.fields-and-buttons__text-field
-        label.h3.text-field__label(for="text-field") masked text field
-        input.text-field__input.text-field__masked-text(type="date" id="text-field" value="Email")
+        .text-field.fields-and-buttons__text-field
+          label.h3.text-field__label(for="text-field") masked text field
+          input.text-field__input.text-field__masked-text(type="date" id="text-field" value="Email")
 
 
 block append scripts

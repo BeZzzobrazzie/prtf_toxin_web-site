@@ -1,8 +1,10 @@
-.text-field {
+.text-field-demo {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
   @import '__label/__label';
   @import '__sublabel/__sublabel';
   @import '__input/_input';
