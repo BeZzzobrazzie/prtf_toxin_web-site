@@ -5,8 +5,6 @@
 
   max-width: 320px;
   width: 100%;
-  @import '__label/__label';
-  @import '__sublabel/__sublabel';
-  @import '__input/_input';
   @import '__masked-text/__masked-text';
+  @import '__text-field-input/text-field-demo__text-field-input';
 }

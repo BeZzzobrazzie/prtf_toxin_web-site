@@ -1,16 +1,16 @@
 .text-field-input {
+
+  max-width: 320px;
   width: 100%;
-  height: 43px;
+
 
   border-radius: 4px;
-  box-sizing: border-box;
-
   border: 1px solid #1F204140;
-  margin-top: 5px;
   padding: 0 15px;
 
   font-family: 'Montserrat-Regular';
   color: #1F204140;
+  line-height: 3;
 
     &:hover {
       color: #1F2041BF;

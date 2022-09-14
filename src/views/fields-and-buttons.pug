@@ -4,21 +4,28 @@ block append variables
   -
     title = "Fields and buttons";
 
+block styles 
+  link(href=require('../styles/p-fields-and-buttons.scss') rel='stylesheet')
+
 
 block content
   .fields-and-buttons
     .container
       .fields-and-buttons__wrap
+
         .fields-and-buttons__text-field-demo
           .text-field-demo
-            label.h3(for="text-field") text field 
-            p.text-field-demo__sublabel Default 
-            input.text-field-input(type="text" id="text-field" value="Email")
+            label.h3(for="text-field-input") text field 
+            p.text-field-sublabel Default
+            .text-field-demo__text-field-input
+              input.text-field-input(type="text" id="text-field-input" value="Email")
       
-        .text-field.fields-and-buttons__text-field
-          label.h3.text-field__label(for="text-field-hover-focus") text field 
-          p.text-field__sublabel Hover / Focus 
-          input.text-field__input.text-field__input_status_hover-focus.body-text(type="text" id="text-field-hover-focus" value="This is pretty awesome")
+        .fields-and-buttons__text-field-demo
+          .text-field-demo
+            label.h3(for="text-field-input-hover-focus") text field 
+            p.text-field-sublabel Hover / Focus
+            .text-field-demo__text-field-input
+              input.text-field-input.text-field-input_status_hover-focus(type="text" id="text-field-input-hover-focus" value="This is pretty awesome")
 
         .dropdown.fields-and-buttons__dropdown
           label.h3.dropdown__label Dropdown 
@@ -55,3 +62,4 @@ block content
 
 block append scripts
   script(src=require('../blocks/dropdown/dropdown.js'))
+  script(src=require('../blocks/text-field-input/text-field-input.js'))

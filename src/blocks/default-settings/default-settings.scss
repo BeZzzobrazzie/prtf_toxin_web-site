@@ -4,3 +4,7 @@ html {
   font-size: 14px;
   font-family: 'Montserrat-Regular', Arial, sans-serif;
 }
+
+div, input {
+  box-sizing: border-box;
+}

@@ -2,6 +2,7 @@ let field = document.querySelector(".dropdown__field");
 let expand = document.querySelector(".dropdown-field__expand");
 let list = document.querySelector(".dropdown__list");
 
+
 field.addEventListener("click", dropdownHide);
 list.addEventListener("click", quantityChange);
 
