@@ -1,33 +1,23 @@
-document.addEventListener('click', delTheDefaultValue);
-
-let elem = document.querySelector('.text-field-input');
-
-elem.addEventListener('blur', delTheDefaultValue2);
-//elem.onblur = function() {
-//  elem.value = "222";
-//}
-
-function delTheDefaultValue() {
-
-  let i;
-
-  if(event.target.dataset.pressing == "False") {
-    //event.target.value = '';
-    //event.target.dataset.pressing = "True";
-    //event.target.value = "111";
-    //i = event.target;
-    //console.log(event.target.value);
+class textFieldInput {
+  constructor() {
+    let arr = document.querySelectorAll('.text-field-input');
+    for (let elem of arr) {
+      elem.addEventListener('focus', this.handleTextFieldInputFocus);
+      elem.addEventListener('blur', this.handleTextFieldInputBlur);
+    }
   }
 
-
-}
-
-function delTheDefaultValue2() {
-  console.log('1');
-  let elem = document.querySelector('.text-field-input');
-  console.log(elem.value);
-  if(elem.value == '') {
-    elem.value = '10000';
-    console.log('2');
+  handleTextFieldInputFocus() {
+    if(event.target.value == event.target.getAttribute('value')) {
+      event.target.value = '';
+    }
+  }
+  
+  handleTextFieldInputBlur() {
+    if(event.target.value == '') {
+      event.target.value = event.target.getAttribute('value');
+    }
   }
 }
+
+let objTextFieldInput = new textFieldInput();

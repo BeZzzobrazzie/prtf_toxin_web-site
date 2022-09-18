@@ -1,20 +1,21 @@
-let field = document.querySelector(".dropdown__field");
+let field = document.querySelector(".dropdown-field");
 let expand = document.querySelector(".dropdown-field__expand");
 let list = document.querySelector(".dropdown__list");
+let floor = document.querySelector(".dropdown__floor");
 
 
 field.addEventListener("click", dropdownHide);
 list.addEventListener("click", quantityChange);
 
 function dropdownHide() {
-    if(list.hidden) {
-        list.hidden = false;
-        expand.textContent = "expand_less";
+    if(floor.hidden) {
+        floor.hidden = false;
+        expand.querySelector('p').textContent = "expand_less";
         field.classList.toggle("dropdown-field_expanded");
     }
     else {
-        list.hidden = true;
-        expand.textContent = "expand_more";
+        floor.hidden = true;
+        expand.querySelector('p').textContent = "expand_more";
         field.classList.toggle("dropdown-field_expanded");
     }
 }
