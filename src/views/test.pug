@@ -40,26 +40,17 @@ block styles
 
 
 block content
-  .colors-and-fonts
-    .container
-      .colors-and-fonts__wrap
+  .test 
+    .calendar-wrapper
+      button(id="btnPrev" type="button") Предыдущий
+      button(id="btnPrev" type="button") Следующий
+      div(id="divCal")
 
-        .colors-and-fonts__palette
-          .palette
-            each val, key in palette 
-              +color-card(val.color, key, val.hex)
 
-        .colors-and-fonts__font-set
-          .font-set
-            +__icon("H1", 24)
-            h1.h1 This one is the sub-section or widget title
 
-            +__icon("H2", 19)
-            h2.h2 Next one is the item title inside widgets
-
-            +__icon("H3", 12)
-            h3.h3 This is a label or CTA text
-
-            +__icon("Body", 14)
-            p.body-text This is the body text which is used for most of the design, like paragraphs, lists, etc.
+block append scripts
+  script(src=require('../js/test.js'))
+  //script(src=require('../js/jquery-3.6.1.js'))
+  //script(src=require('../blocks/dropdown/dropdown.js'))
+  //script(src=require('../blocks/text-field-input/text-field-input.js'))
 
