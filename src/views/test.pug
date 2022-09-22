@@ -41,11 +41,32 @@ block styles
 
 block content
   .test 
-    //.calendar-wrapper
-      button(id="btnPrev" type="button") Предыдущий
-      button(id="btnPrev" type="button") Следующий
-      div(id="divCal")
+    .calendar-wrapper
+      button.btn-prev(id="btnPrev" type="button") Предыдущий
+      button.btn-next(id="btnNext" type="button") Следующий
+      div.calendar(id="divCal")
 
+    .calendar
+      .calendar__header
+        p.material-icons.calendar__arrow arrow_back
+        p.h2 Август 2019
+        p.material-icons.calendar__arrow arrow_forward
+      .calendar-body 
+        table 
+          tr 
+            td Пн
+            td Вт
+            td Ср
+            td Чт 
+            td Пт
+            td Сб
+            td Вс
+          tr 
+            td 4
+      .calendar__command-line 
+        .command-line 
+          .h3.command-line__command Очистить
+          .h3.command-line__command Применить
 
 
 

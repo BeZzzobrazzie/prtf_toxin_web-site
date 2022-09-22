@@ -87,8 +87,31 @@ block content
                   .dropdown-field__expand
                     p.material-icons expand_more
 
+        .calendar
+          .calendar__header
+            p.material-icons.calendar__arrow arrow_back
+            p.h2 Август 2019
+            p.material-icons.calendar__arrow arrow_forward
+          .calendar-body 
+            table 
+              tr 
+                td Пн
+                td Вт
+                td Ср
+                td Чт 
+                td Пт
+                td Сб
+                td Вс
+              tr 
+                td 4
+          .calendar__command-line 
+            .command-line 
+              .h3.command-line__command Очистить
+              .h3.command-line__command Применить
+
 
 
 block append scripts
-  script(src=require('../blocks/dropdown/dropdown.js'))
   script(src=require('../blocks/text-field-input/text-field-input.js'))
+  script(src=require('../blocks/dropdown/dropdown.js'))
+  script(src=require('../blocks/calendar/calendar.js'))
