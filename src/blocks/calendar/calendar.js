@@ -1,11 +1,14 @@
 class calendar {
-  constructor(calendarWrapper, btnNext, btnPrev) {
+  constructor(calendar) {
     
-    this.calendarWrapper = calendarWrapper;
-    this.elem = calendarWrapper.querySelector('.calendar...');
+    this.calendar = calendar;
+    this.calendarMonthAndYear = calendar.querySelector('.calendar__month-and-year');
+    this.calendarBody = calendar.querySelector('.calendar-body');
+    this.arrowBack = calendar.querySelector('.calendar__arrow_back');
+    this.arrowForward = calendar.querySelector('.calendar__arrow_forward');
     
-    this.btnPrev = this.calendarWrapper.querySelector('.btn-prev');
-    this.btnNext = this.calendarWrapper.querySelector('.btn-next');
+    this.btnPrev = this.arrowBack
+    this.btnNext = this.arrowForward
 
     this.btnPrev.addEventListener('click', this);
     this.btnNext.addEventListener('click', this);
@@ -78,9 +81,12 @@ class calendar {
     let lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
     let html = '<table>';
     // Запись выбранного месяца и года
-    html += '<thead><tr>';
-    html += '<td colspan="7">' + this.Months[m] + ' ' + y + '</td>';
-    html += '</tr></thead>';
+    //let MonthsAndYear = document.createTextNode(this.Months[m] + ' ' + y);
+
+    //this.calendarMonthAndYear.append(MonthsAndYear);
+    //html += '<thead><tr>';
+    //html += '<td colspan="7">' + this.Months[m] + ' ' + y + '</td>';
+    //html += '</tr></thead>';
     // заголовок дней недели
     html += '<tr class="days">';
     for(let i=0; i < this.DaysOfWeek.length; i++) {
@@ -130,7 +136,7 @@ class calendar {
     // Конец таблицы
     html += '</table>';
     // Записываем HTML в div
-    this.elem.innerHTML = html;
+    this.calendarBody.innerHTML = html;
   }
 
   /*handleTextFieldInputFocus() {
@@ -148,12 +154,12 @@ class calendar {
 }
 
 
-let calend = document.querySelector('.calendar-wrapper');
+let calend = document.querySelector('.calendar');
 console.log(calend);
 let next = document.querySelector('.btn-next');
 console.log(next);
 let prev = document.querySelector('.btn-prev');
-let objCalendar = new calendar(calend, next, prev);
+let objCalendar = new calendar(calend);
 
 //objCalendar.showcurr();
 
