@@ -3,15 +3,12 @@ class calendar {
     
     this.calendar = calendar;
     this.calendarMonthAndYear = calendar.querySelector('.calendar__month-and-year');
-    this.calendarBody = calendar.querySelector('.calendar-body');
+    this.calendarBody = calendar.querySelector('.calendar__body');
     this.arrowBack = calendar.querySelector('.calendar__arrow_back');
     this.arrowForward = calendar.querySelector('.calendar__arrow_forward');
-    
-    this.btnPrev = this.arrowBack
-    this.btnNext = this.arrowForward
 
-    this.btnPrev.addEventListener('click', this);
-    this.btnNext.addEventListener('click', this);
+    this.arrowBack.addEventListener('click', this);
+    this.arrowForward.addEventListener('click', this);
 
     this.DaysOfWeek = [
       'Пн',
@@ -29,20 +26,13 @@ class calendar {
     this.currDay = d.getDate();
 
     this.showcurr();
-
-    /*let arr = document.querySelectorAll('.text-field-input');
-    for (let elem of arr) {
-      elem.addEventListener('focus', this.handleTextFieldInputFocus);
-      elem.addEventListener('blur', this.handleTextFieldInputBlur);
-    }*/
-
   }
 
   handleEvent(event) {
-    if(event.target == this.btnPrev) {
+    if(event.target == this.arrowBack) {
       this.previousMonth();
     }
-    else if (event.target == this.btnNext) {
+    else if (event.target == this.arrowForward) {
       this.nextMonth();
     }
   }
@@ -68,9 +58,20 @@ class calendar {
     }
     this.showcurr();
   }
+
+  createCell(elementClass, content) {
+    let cell = document.createElement('td');
+    cell.classList.add('calendar__cell');
+    cell.classList.add(elementClass);
+    cell.append(content);
+
+    return cell;
+  }
+
   showcurr() {
     this.showMonth(this.currYear, this.currMonth);
   }
+
   showMonth(y, m) {
     let d = new Date();
     // Первый день недели в выбранном месяце 
@@ -78,35 +79,36 @@ class calendar {
     // Последний день выбранного месяца
     let lastDateOfMonth =  new Date(y, m+1, 0).getDate();
     // Последний день предыдущего месяца
-    let lastDayOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
-    let html = '<table>';
-    // Запись выбранного месяца и года
-    //let MonthsAndYear = document.createTextNode(this.Months[m] + ' ' + y);
+    let lastDateOfLastMonth = m == 0 ? new Date(y-1, 11, 0).getDate() : new Date(y, m, 0).getDate();
 
-    //this.calendarMonthAndYear.append(MonthsAndYear);
-    //html += '<thead><tr>';
-    //html += '<td colspan="7">' + this.Months[m] + ' ' + y + '</td>';
-    //html += '</tr></thead>';
-    // заголовок дней недели
-    html += '<tr class="days">';
+    let table = document.createElement('table');
+    table.classList.add('calendar__table');
+
+    // Запись выбранного месяца и года
+    let MonthsAndYear = document.createTextNode(this.Months[m] + ' ' + y);
+    this.calendarMonthAndYear.firstChild.replaceWith(MonthsAndYear);
+
+    let RowDaysOfWeek = document.createElement('tr');
     for(let i=0; i < this.DaysOfWeek.length; i++) {
-      html += '<td>' + this.DaysOfWeek[i] + '</td>';
+      RowDaysOfWeek.append(this.createCell('calendar__cell_days-of-week', this.DaysOfWeek[i]));
     }
-    html += '</tr>';
+    table.append(RowDaysOfWeek);
+
     // Записываем дни
     let i=1;
+    let row;
     do {
       let dow = new Date(y, m, i).getDay();
       // Начать новую строку в понедельник
       if ( dow == 1 ) {
-        html += '<tr>';
+        row = document.createElement('tr');
       }
       // Если первый день недели не понедельник показать последние дни предыдущего месяца
       else if ( i == 1 ) {
-        html += '<tr>';
-        let k = lastDayOfLastMonth - firstDayOfMonth+1;
+        row = document.createElement('tr');
+        let k = lastDateOfLastMonth - firstDayOfMonth+1;
         for(let j=0; j < firstDayOfMonth; j++) {
-          html += '<td class="not-current">' + k + '</td>';
+          row.append(this.createCell('calendar__cell_not-current', k));
           k++;
         }
       }
@@ -115,52 +117,32 @@ class calendar {
       let chkY = chk.getFullYear();
       let chkM = chk.getMonth();
       if (chkY == this.currYear && chkM == this.currMonth && i == this.currDay) {
-        html += '<td class="today">' + i + '</td>';
+        row.append(this.createCell('calendar__cell_today', i));
       } else {
-        html += '<td class="normal">' + i + '</td>';
+        row.append(this.createCell('calendar__cell_default', i));
       }
       // закрыть строку в воскресенье
       if ( dow == 0 ) {
-        html += '</tr>';
+        table.append(row);
       }
       // Если последний день месяца не воскресенье, показать первые дни следующего месяца
       else if ( i == lastDateOfMonth ) {
-      let k=1;
-      for(dow; dow < 7; dow++) {
-        html += '<td class="not-current">' + k + '</td>';
-        k++;
-      }
+        let k=1;
+        for(dow; dow < 7; dow++) {
+          row.append(this.createCell('calendar__cell_not-current', k));
+          k++;
+        }
+        table.append(row);
       }
       i++;
     }while(i <= lastDateOfMonth);
-    // Конец таблицы
-    html += '</table>';
-    // Записываем HTML в div
-    this.calendarBody.innerHTML = html;
+    this.calendarBody.firstChild.replaceWith(table);
   }
-
-  /*handleTextFieldInputFocus() {
-    if(event.target.value == event.target.getAttribute('value')) {
-      event.target.value = '';
-    }
-  }
-  
-  handleTextFieldInputBlur() {
-    if(event.target.value == '') {
-      event.target.value = event.target.getAttribute('value');
-    }
-  }*/
-
 }
 
 
 let calend = document.querySelector('.calendar');
-console.log(calend);
-let next = document.querySelector('.btn-next');
-console.log(next);
-let prev = document.querySelector('.btn-prev');
-let objCalendar = new calendar(calend);
 
-//objCalendar.showcurr();
+let objCalendar = new calendar(calend);
 
 
