@@ -1,37 +1,3 @@
-class dropdown {
-  constructor(selectorDropdown) {
-    let dropdownField = selectorDropdown.querySelector(".dropdown-field");
-    let arr = document.querySelectorAll(selectorDropdown);
-    for (let elem of arr) {
-      elem.addEventListener("click", this);
-    }
-
-
-  }
-
-  handleEvent(event) {
-    dropdownHide();
-  }
-
-  dropdownHide() {
-    if(floor.hidden) {
-        floor.hidden = false;
-        expand.querySelector('p').textContent = "expand_less";
-        field.classList.toggle("dropdown-field_expanded");
-    }
-    else {
-        floor.hidden = true;
-        expand.querySelector('p').textContent = "expand_more";
-        field.classList.toggle("dropdown-field_expanded");
-    }
-}
-
-}
-
-let objDropdown = new dropdown;
-
-
-
 let field = document.querySelector(".dropdown-field");
 let expand = document.querySelector(".dropdown-field__expand");
 let list = document.querySelector(".dropdown__list");
