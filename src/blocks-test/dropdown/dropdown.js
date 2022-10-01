@@ -2,7 +2,6 @@ export class dropdown {
   constructor() {
     //console.log(this);
 
-
   }
 
   init() {
