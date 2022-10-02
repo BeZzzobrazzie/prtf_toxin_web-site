@@ -13,6 +13,11 @@ module.exports = {
     "fields-and-buttons": "./src/views/fields-and-buttons.pug",
     "test": "./src/views/test.pug",
   },
+  stats: {
+
+    errorDetails: true,
+  },
+
   output: {
     path: path.join(__dirname, 'dist/'),
     publicPath: '/',

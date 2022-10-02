@@ -1,5 +1,13 @@
+import {baseClass} from '../baseClass/baseClass';
 
-class test {
+class test extends baseClass {
+
+  hi() {
+    console.log('hi');
+  }
+}
+
+class test1 {
   constructor() {
     this.me = document.querySelector('.test');
     this.descendants = {};
@@ -51,4 +59,5 @@ class test {
   }
 }
 
-let t = new test();
+let el = document.querySelector('.test');
+let t = new test(el);
