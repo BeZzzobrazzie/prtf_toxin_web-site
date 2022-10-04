@@ -1,18 +1,8 @@
-export class dropdown {
-  constructor() {
-    //console.log(this);
+import {baseClass} from '../baseClass/baseClass';
 
-  }
+export class dropdown extends baseClass {
 
-  init() {
 
-  }
-
-  handleEvent(event) {
-    if(event.target == 1) {
-
-    }
-  }
 
 
 }
