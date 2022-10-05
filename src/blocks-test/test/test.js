@@ -1,6 +1,6 @@
 import {baseClass} from '../baseClass/baseClass';
 
-class test extends baseClass {
+export class test extends baseClass {
 
   hi() {
     console.log('hi');
@@ -9,5 +9,3 @@ class test extends baseClass {
 
 
 
-let el = document.querySelector('.test');
-let t = new test(el);
