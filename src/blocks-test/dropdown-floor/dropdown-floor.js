@@ -1,6 +1,6 @@
 import {baseClass} from '../../js/base/baseClass';
 
-export class dropdown extends baseClass {
+export class dropdownFloor extends baseClass {
 
   
 

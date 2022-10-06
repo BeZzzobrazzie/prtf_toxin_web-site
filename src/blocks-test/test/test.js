@@ -1,4 +1,4 @@
-import {baseClass} from '../baseClass/baseClass';
+import {baseClass} from '../../js/base/baseClass';
 
 export class test extends baseClass {
 

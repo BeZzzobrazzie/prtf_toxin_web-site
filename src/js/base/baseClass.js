@@ -5,6 +5,7 @@ export class baseClass {
     this.init(this.domElement);
     //console.log(this.children);
     console.log(this);
+    console.log(this.translateNameClass('base-class'));
   }
 
   
@@ -19,14 +20,14 @@ export class baseClass {
         let prom;
         switch(this.checkClassBem(c)) {
           case 'block':
-            prom = import('../' + this.pathToModuleBlock(c) + '.js');
+            prom = import('../../blocks-test/' + this.pathToModuleBlock(c) + '.js');
             prom.then(
               result => this.handlerImportResult(result, child), 
               error => this.handlerImportError(error, child)
             );
             break;
           case 'element':
-            prom = import('../' + this.pathToModuleElement(c) + '.js');
+            prom = import('../../blocks-test/' + this.pathToModuleElement(c) + '.js');
             prom.then(
               result => this.handlerImportResult(result, child), 
               error => this.handlerImportError(error, child)
@@ -54,6 +55,17 @@ export class baseClass {
     let elementDirr = '__' + arrClsSplit[1];
     let path = String(blockDirr) + '/' + String(elementDirr) + '/' + String(cls);
     return path;
+  }
+  translateNameClass(cls) {
+    if(cls.includes('-')) {
+      let arr = cls.split('-');
+      let result = arr[0];
+      for(let a = 1; a < arr.length; a++) {
+        result += arr[a][0].toUpperCase() + arr[a].slice(1);
+      }
+      console.log(result);
+      return result;
+    }
   }
   handlerImportResult(result, child) {
     console.log(result);

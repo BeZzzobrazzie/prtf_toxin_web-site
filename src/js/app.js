@@ -1,4 +1,4 @@
-import {baseClass} from '../blocks-test/baseClass/baseClass';
+import {baseClass} from './base/baseClass';
 
 class main extends baseClass {
 
