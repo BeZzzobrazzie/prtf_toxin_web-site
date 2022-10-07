@@ -13,4 +13,10 @@ responsive
 https://github.com/fullstack-development/front-end-best-practices/blob/master/Initiation.md
 
 
+Наименование и прочее: 
+
 Отступы в проекте: 2 пробела
+
+JS:
+
+Класс с заглавной буквы;

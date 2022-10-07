@@ -328,6 +328,21 @@ template {
   font-weight: 400;
   src: local("Material Icons"), local("MaterialIcons-Regular"), url(/assets/fonts/MaterialIcons-Regular.ttf) format("truetype");
 }
+html {
+  background-color: #FFF;
+  color: rgba(31, 32, 65, 0.7490196078);
+  font-size: 14px;
+  font-family: "Montserrat-Regular", Arial, sans-serif;
+}
+
+div, input {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
 .container {
   min-width: 320px;
   margin-left: auto;
@@ -383,16 +398,15 @@ template {
   margin-top: 145px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 145px;
 }
 
 .palette__color-card {
   margin-bottom: 20px;
-  margin-left: 20px;
 }
 
 .color-card {
   display: flex;
-  height: 70px;
 }
 .color-card__color {
   height: 70px;
@@ -421,8 +435,12 @@ template {
 .color-card__color_color-hex_BC9CFF {
   background-color: #BC9CFF;
 }
+.color-card__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .color-card__name {
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 .color-card__hex {
@@ -433,10 +451,11 @@ template {
 }
 
 .font-set {
+  max-width: 435px;
+  min-width: 320px;
   display: grid;
-  grid-template-columns: 40px 400px;
+  grid-template-columns: 40px auto;
   gap: 51px 20px;
-  align-self: start;
 }
 .font-set__icon {
   font-family: "Montserrat-Regular";
@@ -485,76 +504,86 @@ template {
   margin: 0;
 }
 
-.text-field {
+.text-field-demo {
   display: flex;
   flex-wrap: wrap;
-  width: 320px;
+  justify-content: space-between;
+  max-width: 320px;
+  width: 100%;
 }
-.text-field__label {
-  flex-basis: 50%;
+.text-field-demo__masked-text {
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.text-field__sublabel {
+.text-field-demo__text-field-input {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.text-field-sublabel {
   font-family: "Montserrat-Regular";
   color: rgba(31, 32, 65, 0.5019607843);
   text-transform: uppercase;
   font-size: 12px;
-  text-align: right;
-  flex-basis: 50%;
   margin: 0;
 }
-.text-field__input {
+
+.text-field-input {
+  max-width: 320px;
   width: 100%;
-  height: 43px;
   border-radius: 4px;
-  box-sizing: border-box;
   border: 1px solid rgba(31, 32, 65, 0.2509803922);
-  margin-top: 5px;
   padding: 0 15px;
   font-family: "Montserrat-Regular";
   color: rgba(31, 32, 65, 0.2509803922);
+  line-height: 3;
 }
-.text-field__input:hover {
+.text-field-input:hover {
   color: rgba(31, 32, 65, 0.7490196078);
   border: 1px solid rgba(31, 32, 65, 0.5019607843);
 }
-.text-field__input:focus {
-  color: rgba(31, 32, 65, 0.7490196078);
-  border: 1px solid rgba(31, 32, 65, 0.5019607843);
-  outline: 0;
-}
-.text-field__input_status_hover-focus {
+.text-field-input:focus {
   color: rgba(31, 32, 65, 0.7490196078);
   border: 1px solid rgba(31, 32, 65, 0.5019607843);
   outline: 0;
 }
-.text-field__masked-text {
-  text-transform: uppercase;
-  font-size: 14px;
+.text-field-input_status_hover-focus {
+  color: rgba(31, 32, 65, 0.7490196078);
+  border: 1px solid rgba(31, 32, 65, 0.5019607843);
+  outline: 0;
 }
 
 .fields-and-buttons {
   height: 2000px;
-  background-color: green;
 }
-.fields-and-buttons__container {
+.fields-and-buttons__wrap {
   padding-top: 140px;
 }
-.fields-and-buttons__text-field {
+.fields-and-buttons__text-field-demo {
   margin-bottom: 22px;
 }
 .fields-and-buttons__dropdown {
   margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+.fields-and-buttons__date-dropdown {
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
 }
 
 .dropdown {
   position: relative;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
 }
-.dropdown__label {
-  flex-basis: 100%;
-}
-.dropdown__field {
+.dropdown__dropdown-field {
   margin-top: 5px;
+}
+.dropdown__floor {
+  position: absolute;
+  width: 100%;
 }
 .dropdown__list {
   color: rgba(31, 32, 65, 0.7490196078);
@@ -563,15 +592,12 @@ template {
   border-top: 0px;
   border-radius: 0 0 4px 4px;
   outline: 0;
-  height: 158px;
-  width: 100%;
-  position: absolute;
-  box-sizing: border-box;
+  padding-top: 6px;
 }
 .dropdown__row {
   display: flex;
   justify-content: space-between;
-  margin: 6px 7px 0 15px;
+  margin: 0 7px 6px 15px;
 }
 .dropdown__row-text {
   display: flex;
@@ -591,9 +617,10 @@ template {
   border-radius: 15px;
   font-family: "Monserat Regular";
   font-size: 18px;
-  text-align: center;
-  line-height: 30px;
   color: rgba(31, 32, 65, 0.2509803922);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dropdown__btn-count_further {
   border: 1px solid rgba(31, 32, 65, 0.5019607843);
@@ -606,32 +633,28 @@ template {
 .dropdown__command-line {
   display: flex;
   justify-content: space-between;
-  padding: 0 7px 12px 15px;
+  margin: 26px 7px 12px 15px;
 }
 .dropdown__command {
   color: #BC9CFF;
-  margin-top: 20px;
-  cursor: default;
+  cursor: pointer;
   user-select: none;
 }
 
 .dropdown-field {
   width: 100%;
-  height: 43px;
-  box-sizing: border-box;
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.2509803922);
   display: flex;
   justify-content: space-between;
 }
 .dropdown-field__value {
-  padding: 0 15px;
-  flex-grow: 1;
+  padding-left: 15px;
+  line-height: 3;
   display: flex;
-  align-items: center;
 }
 .dropdown-field__expand {
-  width: 44px;
+  width: 42px;
   display: flex;
   justify-content: center;
   align-items: center;

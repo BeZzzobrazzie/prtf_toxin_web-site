@@ -6,66 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="none">
     <meta name="description" content="none">
-    <link href="/assets/css/index.076a1da7.css" rel="stylesheet">
+    <link href="/assets/css/p-fields-and-buttons.5815250e.css" rel="stylesheet">
     <title>Fields and buttons</title>
   </head>
   <body>
     <div class="fields-and-buttons">
-      <div class="container fields-and-buttons__container">
-        <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label" for="text-field">text
-            field </label>
-          <p class="text-field__sublabel">Default </p><input class="text-field__input" type="text" id="text-field"
-            value="Email">
-        </div>
-        <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
-            for="text-field-hover-focus">text field </label>
-          <p class="text-field__sublabel">Hover / Focus </p><input
-            class="text-field__input text-field__input_status_hover-focus body-text" type="text"
-            id="text-field-hover-focus" value="This is pretty awesome">
-        </div>
-        <div class="dropdown fields-and-buttons__dropdown"><label class="h3 dropdown__label">Dropdown </label>
-          <div class="dropdown-field dropdown__field">
-            <div class="dropdown-field__value body-text">Сколько гостей</div>
-            <div class="dropdown-field__expand material-icons">expand_more</div>
-          </div>
-          <div class="dropdown__list" hidden>
-            <div class="dropdown__row">
-              <div class="dropdown__row-text h3">Взрослые</div>
-              <div class="dropdown__count-group">
-                <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
-                <div class="dropdown__count h3">0</div>
-                <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
-              </div>
-            </div>
-            <div class="dropdown__row">
-              <div class="dropdown__row-text h3">Дети</div>
-              <div class="dropdown__count-group">
-                <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
-                <div class="dropdown__count h3">0</div>
-                <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
-              </div>
-            </div>
-            <div class="dropdown__row">
-              <div class="dropdown__row-text h3">Младенцы</div>
-              <div class="dropdown__count-group">
-                <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
-                <div class="dropdown__count h3">0</div>
-                <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
-              </div>
-            </div>
-            <div class="dropdown__command-line">
-              <div class="h3 dropdown__command dropdown__command_clear">Очистить</div>
-              <div class="h3 dropdown__command dropdown__command_apply">Применить</div>
+      <div class="container">
+        <div class="fields-and-buttons__wrap">
+          <div class="fields-and-buttons__text-field-demo">
+            <div class="text-field-demo"><label class="h3" for="text-field-input">text field </label>
+              <p class="text-field-sublabel">Default</p>
+              <div class="text-field-demo__text-field-input"><input class="text-field-input" type="text"
+                  id="text-field-input" value="Email"></div>
             </div>
           </div>
+          <div class="fields-and-buttons__text-field-demo">
+            <div class="text-field-demo"><label class="h3" for="text-field-input-hover-focus">text field </label>
+              <p class="text-field-sublabel">Hover / Focus</p>
+              <div class="text-field-demo__text-field-input"><input
+                  class="text-field-input text-field-input_status_hover-focus" type="text"
+                  id="text-field-input-hover-focus" value="This is pretty awesome"></div>
+            </div>
+          </div>
+          <div class="fields-and-buttons__dropdown">
+            <div class="list-dropdown">
+              <div class="dropdown"><label class="h3">Dropdown</label>
+                <div class="dropdown__dropdown-field">
+                  <div class="dropdown-field">
+                    <div class="dropdown-field__value">
+                      <p class="body-text">Сколько гостей</p>
+                    </div>
+                    <div class="dropdown-field__expand">
+                      <p class="material-icons">expand_more</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-floor" hidden>
+                <div class="dropdown__list">
+                  <div class="dropdown__row">
+                    <div class="dropdown__row-text">
+                      <p class="h3">Взрослые</p>
+                    </div>
+                    <div class="dropdown__count-group">
+                      <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                      <div class="dropdown__count h3">0</div>
+                      <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="dropdown__row">
+                    <div class="dropdown__row-text">
+                      <p class="h3">Дети</p>
+                    </div>
+                    <div class="dropdown__count-group">
+                      <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                      <div class="dropdown__count h3">0</div>
+                      <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="dropdown__row">
+                    <div class="dropdown__row-text">
+                      <p class="h3">Младенцы</p>
+                    </div>
+                    <div class="dropdown__count-group">
+                      <div class="dropdown__btn-count dropdown__btn-count_minus">-</div>
+                      <div class="dropdown__count h3">0</div>
+                      <div class="dropdown__btn-count dropdown__btn-count_further dropdown__btn-count_plus">+</div>
+                    </div>
+                  </div>
+                  <div class="dropdown__command-line">
+                    <div class="h3 dropdown__command dropdown__command_clear">Очистить</div>
+                    <div class="h3 dropdown__command dropdown__command_apply">Применить</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
+              for="text-field">masked text field</label><input class="text-field__input text-field__masked-text"
+              type="date" id="text-field" value="Email"></div>
+          <div class="fields-and-buttons__date-dropdown">
+            <div class="date-dropdown">
+              <div class="dropdown-roof">
+                <div class="dropdown"><label class="h3">Date Dropdown</label>
+                  <div class="dropdown__dropdown-field">
+                    <div class="dropdown-field">
+                      <div class="dropdown-field__value">
+                        <p class="body-text">ДД.ММ.ГГГГ</p>
+                      </div>
+                      <div class="dropdown-field__expand">
+                        <p class="material-icons">expand_more</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="dropdown"><label class="h3">Date Dropdown</label>
+                  <div class="dropdown__dropdown-field">
+                    <div class="dropdown-field">
+                      <div class="dropdown-field__value">
+                        <p class="body-text">19.08.2019</p>
+                      </div>
+                      <div class="dropdown-field__expand">
+                        <p class="material-icons">expand_more</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="dropdown-floor" hidden>
+                <div class="calendar">
+                  <div class="calendar__wrapper">
+                    <div class="calendar__header">
+                      <p class="material-icons calendar__arrow calendar__arrow_back">arrow_back</p>
+                      <p class="h2 calendar__month-and-year">Август 2019</p>
+                      <p class="material-icons calendar__arrow calendar__arrow_forward">arrow_forward</p>
+                    </div>
+                    <div class="calendar__body"> </div>
+                    <div class="calendar__command-line">
+                      <div class="command-line">
+                        <div class="h3 command-line__command">Очистить</div>
+                        <div class="h3 command-line__command">Применить</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="text-field fields-and-buttons__text-field"><label class="h3 text-field__label"
-            for="text-field">masked text field</label><input class="text-field__input text-field__masked-text"
-            type="date" id="text-field" value="Email"></div>
       </div>
     </div>
-    <!--include _scripts-->
-    <script src="/assets/js/main.703d1f84.js"></script>
-    <script src="/assets/js/dropdown.33214606.js"></script>
+    <!--script(src=require('../main.js'))-->
+    <script src="/assets/js/text-field-input.847a8e76.js"></script>
+    <!--script(src=require('../blocks/dropdown/dropdown.js'))-->
+    <script src="/assets/js/dropdown-field.aa344d4a.js"></script>
+    <script src="/assets/js/calendar.11b80c1e.js"></script>
   </body>
 </html>

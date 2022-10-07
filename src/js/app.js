@@ -1,8 +1,13 @@
-import {baseClass} from './base/baseClass';
+import {BaseClass} from './base/baseClass';
 
-class main extends baseClass {
+class Main extends BaseClass {
+  constructor(domElement) {
+    super(domElement);
+    console.log(this);
+  }
+
 
 }
 
 
-let m = new main(document.querySelector('body'));
+let m = new Main(document.querySelector('body'));

@@ -1,11 +1,9 @@
-import {baseClass} from '../../js/base/baseClass';
+import {BaseClass} from '../../js/base/baseClass';
 
-export class test extends baseClass {
+class Test extends BaseClass {
 
-  hi() {
-    console.log('hi');
-  }
+
 }
 
-
+export {Test};
 

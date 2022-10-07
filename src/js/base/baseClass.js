@@ -1,11 +1,9 @@
-export class baseClass {
+class BaseClass {
   constructor(domElement) {
     this.domElement = domElement;
     this.children = [];
     this.init(this.domElement);
-    //console.log(this.children);
-    console.log(this);
-    console.log(this.translateNameClass('base-class'));
+    this.initEventListener(this.domElement);
   }
 
   
@@ -43,7 +41,7 @@ export class baseClass {
   }
 
   createBlank(child) {
-    return new baseClass(child);
+    return new BaseClass(child);
   }
   pathToModuleBlock(cls) {
     let path = String(cls) + '/' + String(cls);
@@ -63,45 +61,62 @@ export class baseClass {
       for(let a = 1; a < arr.length; a++) {
         result += arr[a][0].toUpperCase() + arr[a].slice(1);
       }
-      console.log(result);
       return result;
     }
   }
   handlerImportResult(result, child) {
-    console.log(result);
+    //console.log(result);
     for(let key in result) {
       this.children.push(new result[key](child));
     }
   }
   handlerImportError(error, child) {
-    console.log(error);
+    //console.log(error);
     this.children.push(this.createBlank(child));
   }
   checkClassBem(cls) {
     if(!cls.includes('_')) {
-      //console.log('it is block');
       return 'block'
     }
     else if(cls.includes(cls.match(/[^_]__[^_]/)) && !cls.includes(cls.match(/[^_]_[^_]/))) {
-      //console.log('it is element');
       return 'element'
     }
     else if(cls.includes(cls.match(/[^_]_[^_]/))) {
-      //console.log('it is mod');
       return 'mod'
     }
     else {
-      //console.log('error');
       return 'error'
     }
   }
 
+
+  initEventListener(domElement) {
+    domElement.addEventListener('click', this);
+  }
+
+  handleEvent(event) {
+
+  }
+
+  queryChild(cls) {
+    for(let el of this.children) {
+      if(el.domElement.classList.contains(cls)) {
+        //console.log(el);
+        return el;
+      }
+      else {
+        el.queryChild(cls);
+      }
+    }
+  }
   /*
     Должен иметь:
     - ссылку на dom элемент;
     - метод инициализации детей;
     - коллекцию с сылками на js объекты детей;
-
+    - метод инициализации обработчиков;
   */
 
 }
+
+export {BaseClass};
