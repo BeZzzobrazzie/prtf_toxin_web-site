@@ -2,6 +2,10 @@ import {BaseClass} from '../../js/base/baseClass';
 
 class Dropdown extends BaseClass {
 
+  initEventListener(domElement) {
+    super.initEventListener(domElement);
+    domElement.addEventListener('click', this);
+  }
   
   handleEvent(event) {
     super.handleEvent(event);

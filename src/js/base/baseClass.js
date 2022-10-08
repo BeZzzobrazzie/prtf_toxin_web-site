@@ -11,21 +11,20 @@ class BaseClass {
     for (let child of domElement.children) {
       //нужно импортировать js реализацию каждого блока ребёнка
       //если js реализации нет, создать болванку
-
       for(let c of child.classList) {
         //сделаем допущение, что на одном DOM-элементе может быть только один класс (что не верно, ибо это не так)
 
         let prom;
         switch(this.checkClassBem(c)) {
           case 'block':
-            prom = import('../../blocks-test/' + this.pathToModuleBlock(c) + '.js');
+            prom = import('../../blocks/' + this.pathToModuleBlock(c) + '.js');
             prom.then(
               result => this.handlerImportResult(result, child), 
               error => this.handlerImportError(error, child)
             );
             break;
           case 'element':
-            prom = import('../../blocks-test/' + this.pathToModuleElement(c) + '.js');
+            prom = import('../../blocks/' + this.pathToModuleElement(c) + '.js');
             prom.then(
               result => this.handlerImportResult(result, child), 
               error => this.handlerImportError(error, child)
@@ -91,7 +90,7 @@ class BaseClass {
 
 
   initEventListener(domElement) {
-    domElement.addEventListener('click', this);
+
   }
 
   handleEvent(event) {
@@ -109,6 +108,15 @@ class BaseClass {
       }
     }
   }
+
+
+  addMod() {} // добавляет модификатор в classList DOMElement'а 
+  
+  importMod() {} // импортирует модуль модификатора в блок
+
+  removeMod() {} // удаляет модификатор из classList DOMElement'а 
+
+
   /*
     Должен иметь:
     - ссылку на dom элемент;
